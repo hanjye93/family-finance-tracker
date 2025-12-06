@@ -1,8 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { 
-  PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer, LineChart, Line 
+  PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer, LineChart, Line 
 } from 'recharts';
-import { LayoutDashboard, Table, Plus, X, Wallet, TrendingUp, TrendingDown, Users, Sprout, Save, RotateCcw, Download, Edit2, Check, Lock, Unlock, KeyRound } from 'lucide-react';
+import { LayoutDashboard, Table, Plus, X, Wallet, TrendingUp, TrendingDown, Users, Sprout, Save, Download, Edit2, Lock, Unlock, KeyRound } from 'lucide-react';
 
 // --- Configuration ---
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyK2P2EFABg1kwG1Riz-wWwuX7yfoWo6C-1Iul8qy_lS71MzYsrObTsBkCSdQZcacSI/exec';
@@ -318,9 +318,9 @@ const Dashboard = ({ data, onDrillDown }: any) => {
                   paddingAngle={5}
                   dataKey="value"
                   cursor="pointer"
-                  onClick={(entry) => onDrillDown(entry.name, 'expense')}
+                  onClick={(entry) => onDrillDown(entry.name)}
                 >
-                  {totals.expenseByCategory.map((entry, index) => (
+                  {totals.expenseByCategory.map((_: any, index: number) => (
                     <Cell key={`cell-${index}`} fill={COLORS.expense[index % COLORS.expense.length]} />
                   ))}
                 </Pie>
@@ -364,7 +364,7 @@ const Dashboard = ({ data, onDrillDown }: any) => {
                       paddingAngle={5}
                       dataKey="value"
                     >
-                      {monthlyExpenses.map((entry, index) => (
+                      {monthlyExpenses.map((_: any, index: number) => (
                         <Cell key={`cell-${index}`} fill={COLORS.expense[index % COLORS.expense.length]} />
                       ))}
                     </Pie>
@@ -768,7 +768,7 @@ const App = () => {
     }
   };
 
-  const handleDrillDown = (categoryName: string, type: string) => {
+  const handleDrillDown = (categoryName: string) => {
     const breakdown = data.map(row => ({
       month: row.month,
       value: Number(row.expenses[categoryName]) || 0
