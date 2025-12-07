@@ -7,6 +7,7 @@ import { LayoutDashboard, Table, Plus, X, Wallet, TrendingUp, TrendingDown, User
 // --- Configuration ---
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyK2P2EFABg1kwG1Riz-wWwuX7yfoWo6C-1Iul8qy_lS71MzYsrObTsBkCSdQZcacSI/exec';
 const ADMIN_PIN = '8888'; // <--- CHANGE THIS PIN IF YOU WANT
+const BANNER_IMAGE_URL = 'https://photos.fife.usercontent.google.com/pw/AP1GczP5e9hv6iCDg1vJjd4N4PbgecM_heKOx9Ui88whKCkwNZ24aufPDdNeGA=w1920-h815-s-no-gm?authuser=0'; // <-- Your Hiew Family Photo URL
 
 const CONTRIBUTORS = ['YR', 'HJ', 'HC', 'YH', 'MY'];
 const EXPENSE_CATEGORIES = ['Pocket Money', 'Health Expense', 'Durian Farm', 'Others'];
@@ -832,6 +833,20 @@ const App = () => {
           </div>
         </div>
       </header>
+      
+      {/* NEW BANNER SECTION */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2">
+        <img
+          src={BANNER_IMAGE_URL}
+          alt="Hiew Family Banner"
+          className="w-full h-36 object-cover rounded-xl shadow-lg border-2 border-slate-200"
+          onError={(e) => {
+            (e.target as HTMLImageElement).onerror = null; 
+            (e.target as HTMLImageElement).src = 'https://placehold.co/1200x200/60A5FA/FFFFFF/png?text=Image+Load+Failed';
+          }}
+        />
+      </div>
+
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {activeTab === 'dashboard' && (
