@@ -7,8 +7,7 @@ import { LayoutDashboard, Table, Plus, X, Wallet, TrendingUp, TrendingDown, User
 // --- Configuration ---
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyK2P2EFABg1kwG1Riz-wWwuX7yfoWo6C-1Iul8qy_lS71MzYsrObTsBkCSdQZcacSI/exec';
 const ADMIN_PIN = '8888'; // <--- CHANGE THIS PIN IF YOU WANT
-// !!! ACTION REQUIRED: PASTE YOUR NEW IMAGUR DIRECT LINK BELOW !!!
-const BANNER_IMAGE_URL = 'https://placehold.co/1200x200/4F46E5/FFFFFF/png?text=PLEASE+REPLACE+THIS+URL+WITH+THE+IMGUR+LINK'; 
+const BANNER_IMAGE_URL = 'https://i.imgur.com/IEjedIW.png'; // <--- FINAL, CORRECTED DIRECT IMGUR LINK (based on your Imgur album)
 
 const CONTRIBUTORS = ['YR', 'HJ', 'HC', 'YH', 'MY'];
 const EXPENSE_CATEGORIES = ['Pocket Money', 'Health Expense', 'Durian Farm', 'Others'];
@@ -874,7 +873,7 @@ const App = () => {
 
       <PinModal 
         isOpen={showPinModal} 
-        onClose={() => setIsModalModal(false)} 
+        onClose={() => setIsModalOpen(false)} 
         onSuccess={() => setIsAdmin(true)} 
       />
     </div>
