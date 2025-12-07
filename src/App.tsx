@@ -7,7 +7,7 @@ import { LayoutDashboard, Table, Plus, X, Wallet, TrendingUp, TrendingDown, User
 // --- Configuration ---
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyK2P2EFABg1kwG1Riz-wWwuX7yfoWo6C-1Iul8qy_lS71MzYsrObTsBkCSdQZcacSI/exec';
 const ADMIN_PIN = '8888'; // <--- CHANGE THIS PIN IF YOU WANT
-const BANNER_IMAGE_URL = 'https://photos.fife.usercontent.google.com/pw/AP1GczP5e9hv6iCDg1vJjd4N4PbgecM_heKOx9Ui88whKCkwNZ24aufPDdNeGA=w1920-h815-s-no-gm?authuser=0'; // <-- Your Hiew Family Photo URL
+const BANNER_IMAGE_URL = 'https://photos.fife.usercontent.google.com/pw/AP1GczOSxmHceMe4I8E0O8w2l1X-zdiiILM011bRa_QmQAMZqhrf_a5XRhktOg=w1920-h815-s-no-gm?authuser=0'; // <-- Your Hiew Family Photo URL
 
 const CONTRIBUTORS = ['YR', 'HJ', 'HC', 'YH', 'MY'];
 const EXPENSE_CATEGORIES = ['Pocket Money', 'Health Expense', 'Durian Farm', 'Others'];
