@@ -252,7 +252,7 @@ const Dashboard = ({ data, onDrillDown }: any) => {
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <StatCard 
-          title="Total Family Income" 
+          title="Total Hiew Family Income" 
           value={formatCurrency(totals.totalIncome)} 
           subtext="Lifetime contributions"
           icon={Wallet}
@@ -452,8 +452,7 @@ const DataEditor = ({ data, onAdd, onDelete, onUpdate, loading, isAdmin }: any) 
     if (link.download !== undefined) {
       const url = URL.createObjectURL(blob);
       link.setAttribute('href', url);
-      link.setAttribute('download', `family_finance_data_${new Date().toISOString().slice(0, 10)}.csv`);
-      link.style.visibility = 'hidden';
+      link.setAttribute('download', `Hiew_family_finance_data_${new Date().toISOString().slice(0, 10)}.csv`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -790,7 +789,7 @@ const App = () => {
               <div className="bg-blue-600 p-2 rounded-lg">
                 <Users className="w-5 h-5 text-white" />
               </div>
-              <h1 className="text-xl font-bold text-slate-800 tracking-tight hidden sm:block">Family Finance <span className="text-blue-600">Tracker</span></h1>
+              <h1 className="text-xl font-bold text-slate-800 tracking-tight hidden sm:block">Hiew Family Finance <span className="text-blue-600">Tracker</span></h1>
             </div>
             
             <div className="flex items-center gap-2">
