@@ -7,7 +7,8 @@ import { LayoutDashboard, Table, Plus, X, Wallet, TrendingUp, TrendingDown, User
 // --- Configuration ---
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyK2P2EFABg1kwG1Riz-wWwuX7yfoWo6C-1Iul8qy_lS71MzYsrObTsBkCSdQZcacSI/exec';
 const ADMIN_PIN = '8888'; // <--- CHANGE THIS PIN IF YOU WANT
-const BANNER_IMAGE_URL = 'https://photos.fife.usercontent.google.com/pw/AP1GczOSxmHceMe4I8E0O8w2l1X-zdiiILM011bRa_QmQAMZqhrf_a5XRhktOg=w1920-h815-s-no-gm?authuser=0'; // <-- Your Hiew Family Photo URL
+// !!! ACTION REQUIRED: PASTE YOUR NEW IMAGUR DIRECT LINK BELOW !!!
+const BANNER_IMAGE_URL = 'https://placehold.co/1200x200/4F46E5/FFFFFF/png?text=PLEASE+REPLACE+THIS+URL+WITH+THE+IMGUR+LINK'; 
 
 const CONTRIBUTORS = ['YR', 'HJ', 'HC', 'YH', 'MY'];
 const EXPENSE_CATEGORIES = ['Pocket Money', 'Health Expense', 'Durian Farm', 'Others'];
@@ -873,7 +874,7 @@ const App = () => {
 
       <PinModal 
         isOpen={showPinModal} 
-        onClose={() => setShowPinModal(false)} 
+        onClose={() => setIsModalModal(false)} 
         onSuccess={() => setIsAdmin(true)} 
       />
     </div>
